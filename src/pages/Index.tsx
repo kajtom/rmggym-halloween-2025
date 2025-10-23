@@ -149,10 +149,17 @@ const Index = () => {
       </section>
 
       {/* Halloween Promo Section */}
-      <section className="bg-black py-20 md:py-32 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-5xl font-poppins font-bold text-center text-white mb-12">
-            Nie daj się strasznym cenom – trenuj w RMG GYM za <span className="text-accent font-extrabold">69 zł</span> do końca roku!
+      <section className="relative bg-black py-20 md:py-32 px-4 overflow-hidden">
+        {/* Fog effect */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-500/10 to-transparent animate-[slide_15s_ease-in-out_infinite]" style={{ animationDelay: '0s' }} />
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-gray-400/10 to-transparent animate-[slide_20s_ease-in-out_infinite]" style={{ animationDelay: '5s' }} />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-600/10 to-transparent animate-[slide_25s_ease-in-out_infinite]" style={{ animationDelay: '10s' }} />
+        </div>
+
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <h2 className="text-3xl md:text-5xl font-rubik-wet text-center text-accent mb-12 drop-shadow-2xl">
+            Nie daj się strasznym cenom – trenuj w RMG GYM za 69 zł do końca roku!
           </h2>
 
           <h3 className="text-2xl md:text-3xl font-poppins font-bold text-center text-accent mb-8">
@@ -206,7 +213,7 @@ const Index = () => {
             Wszystko w jednym miejscu. Zero recepcji. Zero ograniczeń. Maksimum swobody.
           </p>
 
-          <p className="text-center text-2xl md:text-3xl text-accent font-bold">
+          <p className="text-center text-2xl md:text-3xl text-accent font-rubik-wet blur-sm hover:blur-none transition-all duration-500 cursor-default">
             Tylko 72h! Po północy oferta znika jak duch. 👻
           </p>
         </div>
@@ -243,138 +250,6 @@ const Index = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Welcome Back Section */}
-      <section className="bg-charcoal py-20 md:py-32 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
-          
-          <p className="text-xl md:text-2xl text-white mb-6">
-            Wiemy, że powroty bywają trudne. Dlatego ułatwiamy Ci ten krok —&nbsp;z&nbsp;ofertą, która się po prostu opłaca. Zapomnij o wymówkach, skomplikowanych umowach i podwyżkach.
-          </p>
-          
-        </div>
-      </section>
-
-      {/* Steps Section */}
-      <section className="bg-black py-20 md:py-32 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-5xl font-poppins font-bold text-center text-white mb-4">
-            Prosto. Przejrzyście. Bez drobnego druku.
-          </h2>
-          
-          <div className="mt-16 space-y-12">
-            {/* KROK 1 */}
-            <div className="bg-charcoal p-8 md:p-12 rounded-lg border-2 border-accent">
-              <h3 className="text-2xl md:text-4xl font-poppins font-bold text-accent mb-6">
-                KROK 1: MEGA OSZCZĘDNOŚĆ
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-ticket-simple"></i></span>
-                  <p className="text-lg md:text-xl text-white">
-                    Płacisz tylko 79,99 zł → trenujesz za tę kwotę do 31 grudnia 2025
-                  </p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-file-signature"></i></span>
-                  <p className="text-lg md:text-xl text-white">
-                    Podpisujesz jedną prostą umowę na 15 miesięcy – bez drobnego druku i podwyżek
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* KROK 2 */}
-            <div className="bg-charcoal p-8 md:p-12 rounded-lg border-2 border-accent">
-              <h3 className="text-2xl md:text-4xl font-poppins font-bold text-accent mb-6">
-                KROK 2: PŁYNNE PRZEJŚCIE & GWARANCJA CENY
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-dumbbell"></i></span>
-                  <p className="text-lg md:text-xl text-white">
-                    Od 1 stycznia 2026 Twój karnet automatycznie przechodzi w 12-miesięczne członkostwo (od 129,99 zł/mies.)*
-                  </p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-lock"></i></span>
-                  <p className="text-lg md:text-xl text-white">
-                    Gwarantujesz sobie stałą cenę na cały 2026 rok i ciągłość treningu bez przerw
-                  </p>
-                </div>
-              </div>
-              <p className="text-sm text-muted-foreground mt-6 italic">
-                *Cena może się różnić w zależności od lokalizacji
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="bg-charcoal py-20 md:py-32 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-5xl font-poppins font-bold text-center text-white mb-12">
-            W RMG GYM DOSTAJESZ WIĘCEJ NIŻ KARNET
-          </h2>
-
-          <div className="space-y-6 mb-12">
-            <div className="flex items-start gap-4">
-              <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-dumbbell"></i></span>
-              <p className="text-xl md:text-2xl text-white font-semibold">Trenujesz 24 h / 7 dni w tygodniu</p>
-            </div>
-            <div className="flex items-start gap-4">
-              <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-user-graduate"></i></span>
-              <p className="text-xl md:text-2xl text-white font-semibold">Trening wprowadzający <span className="text-accent">GRATIS</span></p>
-            </div>
-            <div className="flex items-start gap-4">
-              <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-apple-whole"></i></span>
-              <p className="text-xl md:text-2xl text-white font-semibold">Program dietetyczny <span className="text-accent">GRATIS</span></p>
-            </div>
-            <div className="flex items-start gap-4">
-              <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-droplet"></i></span>
-              <p className="text-xl md:text-2xl text-white font-semibold">Woda na trening <span className="text-accent">GRATIS</span></p>
-            </div>
-          </div>
-          
-          <p className="text-center text-lg md:text-xl text-white font-semibold">
-            Wszystko w jednym miejscu. Zero recepcji. Zero ograniczeń. Maksimum swobody.
-          </p>
-        </div>
-      </section>
-
-      {/* Technical Requirements Section */}
-      <section className="bg-black py-20 md:py-32 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <h3 className="text-2xl md:text-3xl font-poppins font-bold text-center text-white mb-12">
-            Aby skorzystać z oferty, musisz spełnić dwa warunki:
-          </h3>
-
-          <div className="space-y-6 text-white">
-            <div className="bg-charcoal/50 p-6 rounded-lg">
-              <h4 className="text-xl md:text-2xl font-bold text-accent mb-3">1. CZAS:</h4>
-              <p className="text-lg md:text-xl">
-                <InlineCountdown />
-              </p>
-            </div>
-            
-            
-            
-            <div className="bg-charcoal/50 p-6 rounded-lg">
-              <h4 className="text-xl md:text-2xl font-bold text-accent mb-3">2. UMOWA:</h4>
-              <p className="text-lg md:text-xl mb-4">Akceptujesz jedną 15-miesięczną umowę:</p>
-              <ul className="list-none space-y-2 ml-4">
-                <li className="text-base md:text-lg">– okres promocyjny do końca roku (79,99 zł)</li>
-                <li className="text-base md:text-lg">– następnie automatyczne przejście w karnet 12-miesięczny (od 129,99 zł/mies.).</li>
-              </ul>
-            </div>
-          </div>
-
-          <p className="text-center text-xl md:text-2xl text-white font-bold mt-12">
-            💥 Nie czekaj, aż oferta zniknie – <a href={registrationUrl} className="text-accent hover:text-accent/80 underline font-bold">kliknij i wróć na trening!</a>
-          </p>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <section className="bg-black pb-20 px-4">
