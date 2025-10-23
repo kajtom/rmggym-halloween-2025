@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import Navbar from "../components/Navbar";
-import CountdownTimer from "../components/CountdownTimer";
+import FlipClockTimer from "../components/FlipClockTimer";
 import InlineCountdown from "../components/InlineCountdown";
 
 // Funkcja pomocnicza do pobierania wersji na podstawie daty
@@ -120,12 +120,16 @@ const Index = () => {
       {/* Hero Section */}
       <section id="hero-section" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
-          <img
-            src="/images/rmggym-bg.jpg"
-            alt="RMG Gym"
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
             className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/70" />
+          >
+            <source src="/videos/rmggym-halloween.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-pine/20 to-transparent" />
         <div className="container mx-auto px-4 relative z-10">
@@ -135,16 +139,10 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-poppins font-extrabold text-white mb-6">
-              Karnet do końca roku
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-rubik-wet text-accent mb-6 drop-shadow-2xl">
+              STRASZNIE DOBRA OFERTA!<br />69 zł ZA KARNET DO KOŃCA ROKU
             </h1>
-            <p className="text-4xl md:text-7xl font-poppins font-extrabold text-accent mb-8">
-              <span className="text-6xl md:text-9xl">79,99 zł</span>
-            </p>
-            <p className="text-2xl md:text-3xl font-poppins text-white mb-8">
-            Wróć do RMG GYM. Zero wymówek. Zero kombinacji. Jedna decyzja.
-            </p>
-            <CountdownTimer />
+            <FlipClockTimer />
             
           </motion.div>
         </div>
@@ -208,13 +206,13 @@ const Index = () => {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <span className="text-3xl text-yellow-500"><i class="fa-sharp fa-solid fa-ticket-simple"></i></span>
+                  <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-ticket-simple"></i></span>
                   <p className="text-lg md:text-xl text-white">
                     Płacisz tylko 79,99 zł → trenujesz za tę kwotę do 31 grudnia 2025
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <span className="text-3xl text-yellow-500"><i class="fa-sharp fa-solid fa-file-signature"></i></span>
+                  <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-file-signature"></i></span>
                   <p className="text-lg md:text-xl text-white">
                     Podpisujesz jedną prostą umowę na 15 miesięcy – bez drobnego druku i podwyżek
                   </p>
@@ -229,13 +227,13 @@ const Index = () => {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <span className="text-3xl text-yellow-500"><i class="fa-sharp fa-solid fa-dumbbell"></i></span>
+                  <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-dumbbell"></i></span>
                   <p className="text-lg md:text-xl text-white">
                     Od 1 stycznia 2026 Twój karnet automatycznie przechodzi w 12-miesięczne członkostwo (od 129,99 zł/mies.)*
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <span className="text-3xl text-yellow-500"><i class="fa-sharp fa-solid fa-lock"></i></span>
+                  <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-lock"></i></span>
                   <p className="text-lg md:text-xl text-white">
                     Gwarantujesz sobie stałą cenę na cały 2026 rok i ciągłość treningu bez przerw
                   </p>

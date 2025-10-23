@@ -21,6 +21,7 @@ export default {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
+        'rubik-wet': ['Rubik Wet Paint', 'cursive'],
       },
       colors: {
         pine: "#2C5530",
