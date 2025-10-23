@@ -148,6 +148,70 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Halloween Promo Section */}
+      <section className="bg-black py-20 md:py-32 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl md:text-5xl font-poppins font-bold text-center text-white mb-12">
+            Nie daj się strasznym cenom – trenuj w RMG GYM za <span className="text-accent font-extrabold">69 zł</span> do końca roku!
+          </h2>
+
+          <h3 className="text-2xl md:text-3xl font-poppins font-bold text-center text-accent mb-8">
+            JAK TO DZIAŁA?
+          </h3>
+
+          <div className="space-y-6 mb-12 text-white">
+            <div className="flex items-start gap-4">
+              <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-ticket-simple"></i></span>
+              <p className="text-lg md:text-xl">
+                Płacisz tylko <span className="font-extrabold text-accent">69 zł</span> i trenujesz bez limitu do <span className="font-bold">31 grudnia 2025</span>
+              </p>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-calendar-arrow-up"></i></span>
+              <p className="text-lg md:text-xl">
+                Od <span className="font-bold">stycznia 2026</span> Twoje członkostwo przechodzi automatycznie w 12-miesięczny karnet od <span className="font-extrabold text-accent">119 zł/mies.</span>*
+              </p>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-lock"></i></span>
+              <p className="text-lg md:text-xl">
+                Gwarancja stałej ceny do końca <span className="font-bold">2026 r.</span>
+              </p>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-clock"></i></span>
+              <p className="text-lg md:text-xl">
+                Dostęp <span className="font-bold">24/7</span>
+              </p>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-user-graduate"></i></span>
+              <p className="text-lg md:text-xl">
+                Trening wprowadzający <span className="text-accent font-bold">GRATIS</span>
+              </p>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-apple-whole"></i></span>
+              <p className="text-lg md:text-xl">
+                Program dietetyczny <span className="text-accent font-bold">GRATIS</span>
+              </p>
+            </div>
+          </div>
+
+          <p className="text-sm text-muted-foreground text-center mb-8 italic">
+            *cena może różnić się w zależności od lokalizacji
+          </p>
+
+          <p className="text-center text-lg md:text-xl text-white font-semibold mb-12">
+            Wszystko w jednym miejscu. Zero recepcji. Zero ograniczeń. Maksimum swobody.
+          </p>
+
+          <p className="text-center text-2xl md:text-3xl text-accent font-bold">
+            Tylko 72h! Po północy oferta znika jak duch. 👻
+          </p>
+        </div>
+      </section>
+
       {/* Fixed Button */}
       <AnimatePresence>
         {isButtonFixed && (
