@@ -257,97 +257,52 @@ const Index = () => {
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-xl font-semibold text-left">
-                1. Na czym dokładnie polega ta promocja?
+                1. Na czym polega promocja Halloween
               </AccordionTrigger>
               <AccordionContent className="text-lg">
-                <p className="mb-3">Oferta „WRÓĆ DO NAS" to specjalna propozycja dla byłych klubowiczów RMG GYM.</p>
-                <p className="mb-3">Za 79,99 zł trenujesz do końca roku 2025, a od stycznia 2026 Twoje członkostwo automatycznie przechodzi w 12-miesięczny karnet w cenie od 129,99 zł/mies.</p>
-                <p>To jedna, prosta umowa – aż 15 miesięcy treningów bez przerw.</p>
+                Oferujemy trzy karnety w propocyjnych cenach. Płacisz jednorazowo, z góry za cały okres (do 31.12) już od 69 zł, a od 01.01.2026 r. obowiązuje cena regularna karnetu, który wybierzesz.
               </AccordionContent>
             </AccordionItem>
             
             <AccordionItem value="item-2">
               <AccordionTrigger className="text-xl font-semibold text-left">
-                2. Czy muszę podpisywać dwie umowy?
+                2. Czy kupuję karnet tylko do końca roku?
               </AccordionTrigger>
               <AccordionContent className="text-lg">
-                Nie. Podpisujesz jedną umowę na 15 miesięcy – obejmującą okres promocyjny do końca roku (79,99 zł) oraz dalsze członkostwo w 2026 r. Nie ma aneksów, dopłat ani nowych dokumentów.
+                Nie. Kupując karnet w promocyjnej cenie, automatycznie aktywujesz karnet na kolejne miesiące - zgodnie z warunkami wybranej oferty.
               </AccordionContent>
             </AccordionItem>
             
             <AccordionItem value="item-3">
               <AccordionTrigger className="text-xl font-semibold text-left">
-                3. Dlaczego oferta trwa tylko 72 godziny?
+                3. Jakie karnety w ramach promocji Back to School mogę wybrać?
               </AccordionTrigger>
               <AccordionContent className="text-lg">
-                To limitowana akcja dla osób, które wcześniej trenowały w RMG GYM. Promocja jest ważna przez 72 godziny od momentu uruchomienia strony – licznik odlicza dokładnie, ile czasu zostało. Po tym terminie cena wraca do standardowych stawek.
+                Do wyboru masz trzy rodzaje karnetów: na 12 miesięcy, na czas nieokreślony z subskrypcją i okresem wypowiedzenia oraz na czas nieokreślony z subskrypcją bez wypowiedzenia. Szczegóły znajdziesz po kliknięciu "Kupuję karnet".
               </AccordionContent>
             </AccordionItem>
             
             <AccordionItem value="item-4">
               <AccordionTrigger className="text-xl font-semibold text-left">
-                4. Kogo może skorzystać z promocji?
+                4. Dlaczego oferta trwa tylko 72 godziny?
               </AccordionTrigger>
               <AccordionContent className="text-lg">
-                <p className="mb-2">Promocja skierowana jest wyłącznie do klubowiczów RMG GYM, którzy:</p>
-                <ul className="list-disc list-inside space-y-1 ml-4">
-                  <li>nie mają aktywnego karnetu od co najmniej 14 dni,</li>
-                  <li>chcą trenować w RMG GYM w Świdnicy, Elblągu, Gnieźnie, Legnicy lub Słupsku.</li>
-                </ul>
+                To limitowana oferta, która kończy się 02.11.2025 r o godz. 23:59. Po tym terminie cena wraca do standardowych stawek. Po wygaśnięciu promocji nie będzie już możliwości zakupu w tej cenie.
               </AccordionContent>
             </AccordionItem>
             
             <AccordionItem value="item-5">
               <AccordionTrigger className="text-xl font-semibold text-left">
-                5. Czy po 15 miesiącach umowa się automatycznie odnawia?
+                5. Czy to działa we wszystkich klubach?
               </AccordionTrigger>
               <AccordionContent className="text-lg">
-                <p className="mb-2">Nie. Po upływie 15 miesięcy możesz sam zdecydować, czy chcesz kontynuować członkostwo.</p>
-                <p>Przypomnimy Ci o końcu okresu – nic nie stanie się automatycznie bez Twojej zgody.</p>
+                Tak – promocja obowiązuje w całej sieci RMG GYM
               </AccordionContent>
             </AccordionItem>
             
             <AccordionItem value="item-6">
               <AccordionTrigger className="text-xl font-semibold text-left">
-                6. Czy cena 129,99 zł/mies. jest stała dla wszystkich klubów?
-              </AccordionTrigger>
-              <AccordionContent className="text-lg">
-                <p className="mb-2">Cena zależy od lokalizacji – w niektórych klubach może się nieznacznie różnić.</p>
-                <p>Po wyborze klubu przy zakupie karnetu znajdziesz dokładną stawkę obowiązującą w Twoim klubie.</p>
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-7">
-              <AccordionTrigger className="text-xl font-semibold text-left">
-                7. Jak aktywować promocję?
-              </AccordionTrigger>
-              <AccordionContent className="text-lg">
-                Wystarczy kliknąć przycisk „KUP KARNET ZA 79,99 ZŁ", wybrać swój klub i sfinalizować zakup online. Cały proces zajmie Ci mniej niż 2 minuty.
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-8">
-              <AccordionTrigger className="text-xl font-semibold text-left">
-                8. Czy mogę skorzystać z promocji, jeśli mam aktywny karnet?
-              </AccordionTrigger>
-              <AccordionContent className="text-lg">
-                Nie, oferta dotyczy wyłącznie osób bez aktywnego karnetu przez min. 14 dni.
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-9">
-              <AccordionTrigger className="text-xl font-semibold text-left">
-                9. Co jeśli przegapię termin 72 godzin?
-              </AccordionTrigger>
-              <AccordionContent className="text-lg">
-                <p className="mb-2">Po wygaśnięciu promocji nie będzie już możliwości zakupu w tej cenie.</p>
-                <p>Warto więc kliknąć teraz – nawet jeśli planujesz zacząć treningi za kilka dni.</p>
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-10">
-              <AccordionTrigger className="text-xl font-semibold text-left">
-                10. Czy mogę trenować na siłowni RMG GYM jeśli nie jestem pełnoletni?
+                6. Czy mogę trenować na siłowni RMG GYM jeśli nie jestem pełnoletni?
               </AccordionTrigger>
               <AccordionContent className="text-lg">
                 <p className="mb-2">Jasne! Do RMG GYM mogą uczęszczać osoby, które mają ukończone 13 lat.</p>
