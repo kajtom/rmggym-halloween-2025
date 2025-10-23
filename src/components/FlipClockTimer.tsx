@@ -16,8 +16,8 @@ const FlipClockTimer = () => {
   useEffect(() => {
     const updateTimer = () => {
       const now = new Date();
-      const startDate = new Date("2025-10-13T00:01:00");
-      const endDate = new Date("2025-10-15T23:59:59");
+      const startDate = new Date("2025-10-31T00:01:00");
+      const endDate = new Date("2025-11-02T23:59:59");
 
       if (now < startDate) {
         setHasStarted(false);
