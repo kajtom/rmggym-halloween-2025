@@ -149,15 +149,8 @@ const Index = () => {
       </section>
 
       {/* Halloween Promo Section */}
-      <section className="relative bg-black py-20 md:py-32 px-4 overflow-hidden">
-        {/* Fog effect */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-500/10 to-transparent animate-[slide_15s_ease-in-out_infinite]" style={{ animationDelay: '0s' }} />
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-gray-400/10 to-transparent animate-[slide_20s_ease-in-out_infinite]" style={{ animationDelay: '5s' }} />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-600/10 to-transparent animate-[slide_25s_ease-in-out_infinite]" style={{ animationDelay: '10s' }} />
-        </div>
-
-        <div className="container mx-auto max-w-4xl relative z-10">
+      <section className="bg-black py-20 md:py-32 px-4">
+        <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-5xl font-rubik-wet text-center text-accent mb-12 drop-shadow-2xl">
             Nie daj się strasznym cenom – trenuj w RMG GYM za 69 zł do końca roku!
           </h2>
