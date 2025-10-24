@@ -76,7 +76,7 @@ const CountdownTimer = () => {
             fontSize: '40px',
             fontWeight: 'bold',
             color: '#000',
-            backgroundColor: '#1f2937',
+            backgroundColor: '#fff',
             border: 'none',
             borderRadius: '8px',
             margin: '0 4px'
