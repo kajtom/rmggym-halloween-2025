@@ -67,7 +67,7 @@ const CountdownTimer = () => {
           labelStyle={{
             fontSize: '14px',
             fontWeight: 'bold',
-            color: '#f59e0b',
+            color: '#ffffff',
             textTransform: 'uppercase'
           }}
           digitBlockStyle={{
@@ -75,15 +75,15 @@ const CountdownTimer = () => {
             height: '80px',
             fontSize: '40px',
             fontWeight: 'bold',
-            color: '#000',
-            backgroundColor: '#fff',
+            color: '#ffffff',
+            backgroundColor: '#1f2937',
             border: 'none',
             borderRadius: '8px',
             margin: '0 4px'
           }}
           separatorStyle={{
             size: '6px',
-            color: '#f59e0b'
+            color: '#2e3949'
           }}
           showLabels={true}
           showSeparators={true}

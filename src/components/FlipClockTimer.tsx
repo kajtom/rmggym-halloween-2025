@@ -67,7 +67,7 @@ const FlipClockTimer = () => {
           labelStyle={{
             fontSize: '12px',
             fontWeight: 'bold',
-            color: '#f59e0b',
+            color: '#ffffff',
             textTransform: 'uppercase'
           }}
           digitBlockStyle={{
@@ -75,7 +75,7 @@ const FlipClockTimer = () => {
             height: '70px',
             fontSize: '32px',
             fontWeight: 'bold',
-            color: '#000',
+            color: '#ffffff',
             backgroundColor: '#1f2937',
             border: 'none',
             borderRadius: '8px',
@@ -83,7 +83,7 @@ const FlipClockTimer = () => {
           }}
           separatorStyle={{
             size: '6px',
-            color: '#f59e0b'
+            color: '#2e3949'
           }}
           showLabels={true}
           showSeparators={true}

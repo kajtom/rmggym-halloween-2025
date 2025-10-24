@@ -151,7 +151,7 @@ const Index = () => {
       {/* Halloween Promo Section */}
       <section className="bg-black py-20 md:py-32 px-4">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-5xl font-rubik-wet text-center text-accent mb-12 drop-shadow-2xl">
+          <h2 className="text-3xl md:text-5xl font-rubik-wet text-center text-white mb-12 drop-shadow-2xl">
             Nie daj się strasznym cenom – trenuj w RMG GYM za 69 zł do końca roku!
           </h2>
 
