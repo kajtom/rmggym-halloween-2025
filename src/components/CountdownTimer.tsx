@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
+import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
+import "@leenguyen/react-flip-clock-countdown/dist/index.css";
 
 const CountdownTimer = () => {
-  const [timeLeft, setTimeLeft] = useState<string>("");
   const [hasStarted, setHasStarted] = useState(false);
+  const [hasEnded, setHasEnded] = useState(false);
+  const [endDate, setEndDate] = useState<Date | null>(null);
 
   useEffect(() => {
     const updateTimer = () => {
@@ -12,19 +15,16 @@ const CountdownTimer = () => {
 
       if (now < startDate) {
         setHasStarted(false);
-        setTimeLeft("");
+        setHasEnded(false);
+        setEndDate(null);
       } else if (now >= startDate && now <= endDate) {
         setHasStarted(true);
-        const diff = endDate.getTime() - now.getTime();
-        
-        const hours = Math.floor(diff / (1000 * 60 * 60));
-        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-        setTimeLeft(`${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`);
+        setHasEnded(false);
+        setEndDate(endDate);
       } else {
         setHasStarted(false);
-        setTimeLeft("");
+        setHasEnded(true);
+        setEndDate(null);
       }
     };
 
@@ -34,11 +34,61 @@ const CountdownTimer = () => {
     return () => clearInterval(interval);
   }, []);
 
+  if (!hasStarted && !hasEnded) {
+    return (
+      <div className="bg-accent/20 border-2 border-accent px-6 py-4 inline-block mt-6">
+        <p className="text-xl md:text-2xl font-poppins font-extrabold text-accent">
+          🚨 OFERTA WYGASA WKRÓTCE
+        </p>
+      </div>
+    );
+  }
+
+  if (hasEnded) {
+    return (
+      <div className="bg-accent/20 border-2 border-accent px-6 py-4 inline-block mt-6">
+        <p className="text-xl md:text-2xl font-poppins font-extrabold text-accent">
+          🚨 OFERTA JUŻ WYGASŁA
+        </p>
+      </div>
+    );
+  }
+
   return (
-    <div className="bg-accent/20 border-2 border-accent px-6 py-4 inline-block mt-6">
-      <p className="text-xl md:text-2xl font-poppins font-extrabold text-accent">
-        {hasStarted ? `🚨 OFERTA WYGASA ZA: ${timeLeft}` : "🚨 OFERTA WYGASA WKRÓTCE"}
+    <div className="bg-accent/20 border-2 border-accent px-6 py-6 inline-block mt-6">
+      <p className="text-lg md:text-xl font-poppins font-bold text-accent mb-4 text-center">
+        🚨 OFERTA WYGASA ZA:
       </p>
+      {endDate && (
+        <FlipClockCountdown
+          to={endDate.getTime()}
+          className="flip-clock"
+          labels={['Dni', 'Godziny', 'Minuty', 'Sekundy']}
+          labelStyle={{
+            fontSize: '14px',
+            fontWeight: 'bold',
+            color: '#f59e0b',
+            textTransform: 'uppercase'
+          }}
+          digitBlockStyle={{
+            width: '60px',
+            height: '80px',
+            fontSize: '40px',
+            fontWeight: 'bold',
+            color: '#000',
+            backgroundColor: '#1f2937',
+            border: '2px solid #f59e0b',
+            borderRadius: '8px',
+            margin: '0 4px'
+          }}
+          separatorStyle={{
+            size: '6px',
+            color: '#f59e0b'
+          }}
+          showLabels={true}
+          showSeparators={true}
+        />
+      )}
     </div>
   );
 };
