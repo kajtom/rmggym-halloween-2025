@@ -174,7 +174,7 @@ const Index = () => {
       <section className="bg-black py-20 md:py-32 px-4">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-5xl font-rubik-wet text-center text-white mb-12 drop-shadow-2xl">
-            <span className="text-accent">Nie daj się strasznym cenom -</span>trenuj w RMG GYM za 69 zł do końca roku!
+            <span className="text-accent">Nie daj się strasznym cenom</span>trenuj w RMG GYM za 69 zł do końca roku!
           </h2>
 
           <h3 className="text-2xl md:text-3xl font-poppins font-bold text-center text-accent mb-8">
