@@ -87,6 +87,7 @@ const Index = () => {
 
   const [isButtonFixed, setIsButtonFixed] = useState(false);
   const [promo, setPromo] = useState(getPromoContent(new Date()));
+  const [countdownStarted, setCountdownStarted] = useState(false);
 
   useEffect(() => {
     const heroSection = document.getElementById('hero-section');
@@ -111,7 +112,26 @@ const Index = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const registrationUrl = "https://rmggym.pl/podsumowanie";
+  // Sprawdzaj czy odliczanie się rozpoczęło
+  useEffect(() => {
+    const checkCountdownStatus = () => {
+      const now = new Date();
+      const startDate = new Date("2025-10-31T00:01:00");
+      const endDate = new Date("2025-11-02T23:59:59");
+      
+      if (now >= startDate && now <= endDate) {
+        setCountdownStarted(true);
+      } else {
+        setCountdownStarted(false);
+      }
+    };
+
+    checkCountdownStatus();
+    const interval = setInterval(checkCountdownStatus, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const registrationUrl = "https://rmggym.pl/promo";
 
   return (
     <div className="min-h-screen bg-background dark:bg-background font-inter">
@@ -140,7 +160,9 @@ const Index = () => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-rubik-wet text-accent mb-6 drop-shadow-2xl">
-              STRASZNIE DOBRA OFERTA!<br />69 zł ZA KARNET DO KOŃCA ROKU
+              STRASZNIE DOBRA OFERTA!<br />
+              <span className="text-6xl md:text-8xl lg:text-9xl text-white">69 zł</span><br />
+              ZA KARNET DO KOŃCA ROKU
             </h1>
             <FlipClockTimer />
             
@@ -152,7 +174,7 @@ const Index = () => {
       <section className="bg-black py-20 md:py-32 px-4">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-5xl font-rubik-wet text-center text-white mb-12 drop-shadow-2xl">
-            Nie daj się strasznym cenom – trenuj w RMG GYM za 69 zł do końca roku!
+            <span className="text-accent">Nie daj się strasznym cenom -</span>trenuj w RMG GYM za 69 zł do końca roku!
           </h2>
 
           <h3 className="text-2xl md:text-3xl font-poppins font-bold text-center text-accent mb-8">
@@ -161,37 +183,37 @@ const Index = () => {
 
           <div className="space-y-6 mb-12 text-white">
             <div className="flex items-start gap-4">
-              <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-ticket-simple"></i></span>
+              <span className="text-3xl text-yellow-500"><i className="fa-solid fa-ghost"></i></span>
               <p className="text-lg md:text-xl">
-                Płacisz tylko <span className="font-extrabold text-accent">69 zł</span> i trenujesz bez limitu do <span className="font-bold">31 grudnia 2025</span>
+                Płacisz tylko <span className="font-extrabold text-accent">69 zł</span> i trenujesz bez limitu do <span className="font-bold">31 grudnia 2025.*</span>
               </p>
             </div>
             <div className="flex items-start gap-4">
-              <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-calendar-arrow-up"></i></span>
+              <span className="text-3xl text-yellow-500"><i className="fa-solid fa-bat"></i></span>
               <p className="text-lg md:text-xl">
                 Od <span className="font-bold">stycznia 2026</span> Twoje członkostwo przechodzi automatycznie w 12-miesięczny karnet od <span className="font-extrabold text-accent">119 zł/mies.</span>*
               </p>
             </div>
             <div className="flex items-start gap-4">
-              <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-lock"></i></span>
+              <span className="text-3xl text-yellow-500"><i className="fa-solid fa-scarecrow"></i></span>
               <p className="text-lg md:text-xl">
                 Gwarancja stałej ceny do końca <span className="font-bold">2026 r.</span>
               </p>
             </div>
             <div className="flex items-start gap-4">
-              <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-clock"></i></span>
+              <span className="text-3xl text-yellow-500"><i className="fa-solid fa-jack-o-lantern"></i></span>
               <p className="text-lg md:text-xl">
                 Dostęp <span className="font-bold">24/7</span>
               </p>
             </div>
             <div className="flex items-start gap-4">
-              <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-user-graduate"></i></span>
+              <span className="text-3xl text-yellow-500"><i className="fa-solid fa-hat-witch"></i></span>
               <p className="text-lg md:text-xl">
                 Trening wprowadzający <span className="text-accent font-bold">GRATIS</span>
               </p>
             </div>
             <div className="flex items-start gap-4">
-              <span className="text-3xl text-yellow-500"><i className="fa-sharp fa-solid fa-apple-whole"></i></span>
+              <span className="text-3xl text-yellow-500"><i className="fa-solid fa-spider-web"></i></span>
               <p className="text-lg md:text-xl">
                 Program dietetyczny <span className="text-accent font-bold">GRATIS</span>
               </p>
@@ -199,16 +221,18 @@ const Index = () => {
           </div>
 
           <p className="text-sm text-muted-foreground text-center mb-8 italic">
-            *cena może różnić się w zależności od lokalizacji
+           * Od stycznia 2026 Twoje członkostwo przechodzi automatycznie w 12-miesięczny karnet od 119 zł/mies. (cena moze różnić sie w zależności od lokalizacji)
           </p>
 
           <p className="text-center text-lg md:text-xl text-white font-semibold mb-12">
             Wszystko w jednym miejscu. Zero recepcji. Zero ograniczeń. Maksimum swobody.
           </p>
 
-          <p className="text-center text-2xl md:text-3xl text-accent font-rubik-wet blur-sm hover:blur-none transition-all duration-500 cursor-default">
-            Tylko 72h! Po północy oferta znika jak duch. 👻
-          </p>
+          {countdownStarted && (
+            <p className="text-center text-2xl md:text-3xl text-accent font-rubik-wet blur-sm hover:blur-none transition-all duration-500 cursor-default">
+              Tylko 72h! Po północy oferta znika jak duch. 👻
+            </p>
+          )}
         </div>
       </section>
 
@@ -260,7 +284,7 @@ const Index = () => {
                 1. Na czym polega promocja Halloween
               </AccordionTrigger>
               <AccordionContent className="text-lg">
-                Oferujemy trzy karnety w propocyjnych cenach. Płacisz jednorazowo, z góry za cały okres (do 31.12) już od 69 zł, a od 01.01.2026 r. obowiązuje cena regularna karnetu, który wybierzesz.
+                Oferujemy trzy karnety w promocyjnych cenach. Płacisz jednorazowo, z góry za cały okres (do 31.12) już od 69 zł, a od 01.01.2026 r. obowiązuje cena regularna karnetu, który wybierzesz.
               </AccordionContent>
             </AccordionItem>
             
@@ -275,10 +299,10 @@ const Index = () => {
             
             <AccordionItem value="item-3">
               <AccordionTrigger className="text-xl font-semibold text-left">
-                3. Jakie karnety w ramach promocji Back to School mogę wybrać?
+                3. Jakie karnety w ramach promocji Halloween mogę wybrać?
               </AccordionTrigger>
               <AccordionContent className="text-lg">
-                Do wyboru masz trzy rodzaje karnetów: na 12 miesięcy, na czas nieokreślony z subskrypcją i okresem wypowiedzenia oraz na czas nieokreślony z subskrypcją bez wypowiedzenia. Szczegóły znajdziesz po kliknięciu "Kupuję karnet".
+                Do wyboru masz trzy rodzaje karnetów: na 12 miesięcy, na czas nieokreślony z subskrypcją i okresem wypowiedzenia oraz na czas nieokreślony z subskrypcją bez wypowiedzenia. Szczegóły znajdziesz po kliknięciu "<a href={registrationUrl} target="_self" rel="noopener noreferrer" className="font-bold text-accent hover:underline">Kup karnet teraz</a>".
               </AccordionContent>
             </AccordionItem>
             
