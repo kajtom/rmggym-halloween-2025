@@ -36,7 +36,7 @@ const CountdownTimer = () => {
 
   if (!hasStarted && !hasEnded) {
     return (
-      <div className="bg-accent/20 border-2 border-accent px-6 py-4 inline-block mt-6">
+      <div className="px-6 py-4 inline-block mt-6">
         <p className="text-xl md:text-2xl font-poppins font-extrabold text-accent">
           🚨 OFERTA WYGASA WKRÓTCE
         </p>
@@ -46,7 +46,7 @@ const CountdownTimer = () => {
 
   if (hasEnded) {
     return (
-      <div className="bg-accent/20 border-2 border-accent px-6 py-4 inline-block mt-6">
+      <div className="px-6 py-4 inline-block mt-6">
         <p className="text-xl md:text-2xl font-poppins font-extrabold text-accent">
           🚨 OFERTA JUŻ WYGASŁA
         </p>
@@ -55,7 +55,7 @@ const CountdownTimer = () => {
   }
 
   return (
-    <div className="bg-accent/20 border-2 border-accent px-6 py-6 inline-block mt-6">
+    <div className="px-6 py-6 inline-block mt-6">
       <p className="text-lg md:text-xl font-poppins font-bold text-accent mb-4 text-center">
         🚨 OFERTA WYGASA ZA:
       </p>
@@ -77,7 +77,7 @@ const CountdownTimer = () => {
             fontWeight: 'bold',
             color: '#000',
             backgroundColor: '#1f2937',
-            border: '2px solid #f59e0b',
+            border: 'none',
             borderRadius: '8px',
             margin: '0 4px'
           }}
