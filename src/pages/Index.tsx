@@ -131,7 +131,7 @@ const Index = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const registrationUrl = "https://rmggym.pl/promo";
+  const registrationUrl = "https://rmggym.pl/halloween-promo";
 
   return (
     <div className="min-h-screen bg-background dark:bg-background font-inter">
