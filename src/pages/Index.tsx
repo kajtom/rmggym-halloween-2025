@@ -174,8 +174,9 @@ const Index = () => {
       <section className="bg-black py-20 md:py-32 px-4">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-5xl font-rubik-wet text-center text-white mb-12 drop-shadow-2xl">
-            <span className="text-accent">Nie daj się strasznym cenom</span><br/>trenuj w RMG GYM za 69 zł do końca roku!
+            <span className="text-accent">Nie daj się strasznym cenom!</span><br/>Trenuj w RMG GYM za 69 zł<br/>do końca roku!
           </h2>
+          <hr className="my-8 border-yellow-500 w-1/2 mx-auto" />
 
           <h3 className="text-2xl md:text-3xl font-poppins font-bold text-center text-accent mb-8">
             JAK TO DZIAŁA?
@@ -188,12 +189,7 @@ const Index = () => {
                 Płacisz tylko <span className="font-extrabold text-accent">69 zł</span> i trenujesz bez limitu do <span className="font-bold">31 grudnia 2025.*</span>
               </p>
             </div>
-            <div className="flex items-start gap-4">
-              <span className="text-3xl text-yellow-500"><i className="fa-solid fa-bat"></i></span>
-              <p className="text-lg md:text-xl">
-                Od <span className="font-bold">stycznia 2026</span> Twoje członkostwo przechodzi automatycznie w 12-miesięczny karnet od <span className="font-extrabold text-accent">119 zł/mies.</span>*
-              </p>
-            </div>
+            
             <div className="flex items-start gap-4">
               <span className="text-3xl text-yellow-500"><i className="fa-solid fa-scarecrow"></i></span>
               <p className="text-lg md:text-xl">
@@ -281,7 +277,7 @@ const Index = () => {
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-xl font-semibold text-left">
-                1. Na czym polega promocja Halloween
+                1. Na czym polega promocja Halloween?
               </AccordionTrigger>
               <AccordionContent className="text-lg">
                 Oferujemy trzy karnety w promocyjnych cenach. Płacisz jednorazowo, z góry za cały okres (do 31.12) już od 69 zł, a od 01.01.2026 r. obowiązuje cena regularna karnetu, który wybierzesz.
@@ -320,13 +316,13 @@ const Index = () => {
                 5. Czy to działa we wszystkich klubach?
               </AccordionTrigger>
               <AccordionContent className="text-lg">
-                Tak – promocja obowiązuje w całej sieci RMG GYM
+                Tak – promocja obowiązuje w całej sieci RMG GYM.
               </AccordionContent>
             </AccordionItem>
             
             <AccordionItem value="item-6">
               <AccordionTrigger className="text-xl font-semibold text-left">
-                6. Czy mogę trenować na siłowni RMG GYM jeśli nie jestem pełnoletni?
+                6. Czy mogę trenować na siłowni RMG GYM, jeśli nie jestem pełnoletni?
               </AccordionTrigger>
               <AccordionContent className="text-lg">
                 <p className="mb-2">Jasne! Do RMG GYM mogą uczęszczać osoby, które mają ukończone 13 lat.</p>
