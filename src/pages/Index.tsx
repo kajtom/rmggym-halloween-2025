@@ -191,12 +191,6 @@ const Index = () => {
             </div>
             
             <div className="flex items-start gap-4">
-              <span className="text-3xl text-yellow-500"><i className="fa-solid fa-scarecrow"></i></span>
-              <p className="text-lg md:text-xl">
-                Gwarancja stałej ceny do końca <span className="font-bold">2026 r.</span>
-              </p>
-            </div>
-            <div className="flex items-start gap-4">
               <span className="text-3xl text-yellow-500"><i className="fa-solid fa-jack-o-lantern"></i></span>
               <p className="text-lg md:text-xl">
                 Dostęp <span className="font-bold">24/7</span>
